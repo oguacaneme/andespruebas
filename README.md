@@ -45,6 +45,7 @@ venv\Scripts\activate
 python app.py
 
 
+el frond se encuentra dentro de la carpeta prueba
 
 para iniciar el proyecto de angular realizar un
  mpn install
