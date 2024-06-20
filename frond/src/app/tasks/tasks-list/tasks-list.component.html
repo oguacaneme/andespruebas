@@ -1,0 +1,32 @@
+  <div>
+    <h2>Task List</h2>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (task of tasks; track task.idTarea  ){
+        <tr >
+           
+          <td>{{ task.idTarea }}</td>
+          <td>{{ task.titulo }}</td>
+          <td>{{ task.descripcion }}</td>
+          <td>{{ task.fechaVencimiento }}</td>
+          <td>{{ task.completada ? 'Completed' : 'Pending' }}</td>
+
+          <td> @if (!task.completada){ <button type="submit" (click)="onSubmitupdate(task.idTarea)" >Completed</button>}</td>
+           
+        </tr>
+    }
+      </tbody>
+    </table>
+  </div>
+
+  <button (click)="reloadComponent()">Reload Component</button>

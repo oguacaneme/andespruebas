@@ -1,0 +1,25 @@
+<div class="home-container">
+
+<div>
+    <h2>Add New Task</h2>
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+      
+      <div class="form-group">
+        <label for="titulo">Title:</label>
+        <input type="text" id="titulo" name="titulo" [(ngModel)]="newTask.titulo" required>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Description:</label>
+        <textarea id="descripcion" name="descripcion" [(ngModel)]="newTask.descripcion" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="fechaVencimiento">Due Date:</label>
+        <input type="date" id="fechaVencimiento" name="fechaVencimiento" [(ngModel)]="newTask.fechaVencimiento" required>
+      </div>
+    
+      <button type="submit" [disabled]="!taskForm.valid">Submit</button>
+    </form>
+  </div>
+
+</div>
+
